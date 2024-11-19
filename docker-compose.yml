@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   backend-app:
+    restart: always
     hostname: backend-app
     build:
       context: https://github.com/etec-integration-project/etec-pi-2024-backend-drolito123.git
