@@ -15,6 +15,7 @@ services:
       - DB_USER=root
       - DB_PASSWORD=123456
       - DB_NAME=DB
+      - JWT_SECRET=mysecretkey
     networks:
       - pensado-app
 
@@ -44,7 +45,7 @@ services:
       - backend-app
 
   proxy:
-    build:
+    build: 
       context: https://github.com/etec-integration-project/etec-pi-2024-proxy-drolito123.git
       dockerfile: Dockerfile
     container_name: proxy
